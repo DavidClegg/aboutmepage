@@ -1,0 +1,23 @@
+{
+  "name": "aboutmepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --style=expanded --no-source-map style.scss style3.css"
+  },
+  "devDependencies": {
+    "sass": "^1.56.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidClegg/aboutmepage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidClegg/aboutmepage/issues"
+  },
+  "homepage": "https://github.com/DavidClegg/aboutmepage#readme"
+}
