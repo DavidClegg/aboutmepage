@@ -2,5 +2,5 @@ pluggins:
   - jekyll-sass-converter
 
 sass:
-  sass_dir:           ./
+  sass_dir:           _scss
   style:              compressed
