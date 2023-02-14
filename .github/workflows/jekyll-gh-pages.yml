@@ -20,13 +20,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-pluggins:
-  - jekyll-sass-converter
-
-sass:
-  sass_dir:           ./
-  style:              compressed
-
 jobs:
   # Build job
   build:

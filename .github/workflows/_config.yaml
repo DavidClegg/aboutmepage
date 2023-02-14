@@ -1,0 +1,6 @@
+pluggins:
+  - jekyll-sass-converter
+
+sass:
+  sass_dir:           ./
+  style:              compressed
