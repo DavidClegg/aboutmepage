@@ -45,7 +45,6 @@ nav {
   display: flex;
   justify-content: space-around;
 }
-
 nav a {
   margin: 0;
   padding: 1rem;
@@ -55,7 +54,6 @@ nav a {
 .socials {
   text-indent: 5rem;
 }
-
 .socials a {
   text-decoration: none;
   color: blue;
@@ -105,7 +103,6 @@ i {
   font-size: 0.8rem;
   color: rgb(243, 195, 38);
 }
-
 i a {
   color: rgb(204, 140, 2);
 }
@@ -119,6 +116,31 @@ i a {
   }
   .socials {
     text-indent: 1rem;
+  }
+  dialog * {
+    width: 60rem;
+    max-width: 80vw;
+  }
+  dialog .popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  dialog .popup img {
+    height: auto;
+  }
+  dialog .popup .description {
+    padding-right: 1rem;
+    max-width: 60vw;
+  }
+  dialog .popup .description * {
+    max-width: 60vw;
+  }
+  dialog .popup .description .links {
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
   }
 }
 /*PROJECT SECTION*/
@@ -137,31 +159,31 @@ i a {
   height: 9rem;
   cursor: pointer;
 }
-
 .project .thumbnail {
   position: absolute;
-  width: 16em;
-  height: 9em;
+  width: 16rem;
+  height: 9rem;
   background: red;
 }
-
 .project .description {
-  opacity: 0;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  width: 16rem;
-  justify-self: center;
-  padding-bottom: 1rem;
   align-self: end;
+  opacity: 0;
+  width: 16rem;
+  height: 9rem;
   z-index: 1;
 }
-
+.project .description h4 {
+  align-self: end;
+}
 .project .links {
   /* I Would like to add icons for these items*/
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
 }
-
 .project:hover > .description {
   animation: 0.3s fade; /*Run in 0.3s, 1 time*/
   opacity: 1;
@@ -178,11 +200,9 @@ i a {
 #project1 {
   color: white;
 }
-
 #project1 a {
   color: lightblue;
 }
-
 #project1 a:visited {
   color: lightblue;
 }
@@ -199,21 +219,18 @@ dialog {
   padding: 0;
   grid-template-columns: 3fr 2fr;
 }
-
 .popup img {
   margin: 0;
   width: 32rem;
   height: 18rem;
   background: blue;
 }
-
 .popup .description {
   height: 100%;
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
 }
-
 .popup .links {
   display: flex;
   flex-direction: column;

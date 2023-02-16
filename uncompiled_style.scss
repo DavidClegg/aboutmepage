@@ -39,18 +39,18 @@ nav{
     width:100%;
     display: flex;
     justify-content: space-around;
-}
-nav a{
-    margin:0;
-    padding:1rem;
-    color:blue;
+    a{
+        margin:0;
+        padding:1rem;
+        color:blue;
+    }
 }
 .socials{
     text-indent: 5rem;
-}
-.socials a{
-    text-decoration: none;
-    color:blue;
+    a{
+        text-decoration: none;
+        color:blue;
+    }
 }
 .icon{
     color:blue;
@@ -88,9 +88,9 @@ footer{
 i{
     font-size: 0.8rem;
     color:rgb(243, 195, 38);
-}
-i a{
-  color: rgb(204, 140, 2);
+    a{
+      color: rgb(204, 140, 2);
+    }
 }
 /*Adding some responsiveness to look better on mobile*/
 @media screen and (max-width: 800px) {
@@ -103,6 +103,32 @@ i a{
     .socials{
         text-indent: 1rem;
     }
+
+    dialog {
+        *{
+            width: 60rem;
+            max-width: 80vw;
+        }
+        .popup{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1rem;
+            img{
+                height: auto;
+            }
+            .description{
+                padding-right: 1rem;
+                max-width: 60vw;
+                *{max-width: 60vw;}
+                .links{
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 /*PROJECT SECTION*/
@@ -113,37 +139,43 @@ i a{
     flex-wrap: wrap;
     justify-content: center;
 }
+@mixin thumbnailSize{
+    width: 16rem;
+    height: 9rem;
+}
 .project{
     display: flex;
     border: 1px solid black;
-    width: 16rem;
-    height: 9rem;
+    @include thumbnailSize();
     cursor: pointer;
-}
-.project .thumbnail{
-    position: absolute;
-    width: 16em;
-    height: 9em;
-    background: red;
-}
-.project .description{
-    opacity: 0;
-    text-align: center;
-    width: 16rem;
-    justify-self: center;
-    padding-bottom: 1rem;
-    align-self: end;
-    z-index: 1;
-}
-.project .links{
-    /* I Would like to add icons for these items*/
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-}
-.project:hover > .description{
-    animation: 0.3s fade; /*Run in 0.3s, 1 time*/
-    opacity: 1;
+
+    .thumbnail{
+        position: absolute;
+        @include thumbnailSize();
+        background: red;
+    }
+    .description{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-self: end;
+        opacity: 0;
+        @include thumbnailSize();
+        z-index: 1;
+        h4{
+            align-self: end;
+        }
+    }
+    .links{
+        /* I Would like to add icons for these items*/
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+    &:hover > .description{
+        animation: 0.3s fade; /*Run in 0.3s, 1 time*/
+        opacity: 1;
+    }
 }
 @keyframes fade {
     from{
@@ -154,9 +186,15 @@ i a{
     }
 }
 
-#project1{color:white;}
-#project1  a{color: lightblue;}
-#project1  a:visited{color: lightblue;}
+#project1{
+    color:white;
+    a{
+        color: lightblue;
+    }
+    a:visited{
+        color: lightblue;
+    }
+}  
 
 /*POPUP*/
 dialog{
@@ -168,21 +206,22 @@ dialog{
     max-width: 80vw;
     padding: 0;
     grid-template-columns: 3fr 2fr;
-}
-.popup img{
-    margin:0;
-    width: 32rem;
-    height: 18rem;
-    background: blue;
-}
-.popup .description{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
-}
-.popup .links{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+
+    img{
+        margin:0;
+        width: 32rem;
+        height: 18rem;
+        background: blue;
+    }
+    .description{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
