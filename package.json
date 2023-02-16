@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --style=expanded --no-source-map style.scss style3.css"
+    "sass": "sass --style=expanded --no-source-map uncompiled_style.scss style.css"
   },
   "devDependencies": {
     "sass": "^1.56.2"
