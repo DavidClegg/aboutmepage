@@ -1,3 +1,10 @@
-Okay so the config file doesn't need to exist, and the .scss should just be in the .css folder. That's it. All I needed to do was make assets/css/ and put the style.scss file in it.
+# Course Project Page
 
-What a dumb dumb dumb waste of valuable project time.
+This page is the project I've been making during the course.
+
+Initially this is just a simple HTML, and then I've added CSS, and then advanced CSS features (psuedo selectors, animations, and SCSS). 
+
+<a href="https://davidclegg.github.io/aboutmepage/">
+    <h2>Link to the page</h2>
+</a>
+
